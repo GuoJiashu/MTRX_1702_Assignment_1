@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#define NUM_BOARD_SPACES 25
+
 int isValidMove(const char *initial_board, int row, int col) {
     if (row < 0 || row > 4 || col < 0 || col > 4) {
         printf("Invalid move data!\n");
@@ -75,7 +77,7 @@ int isGameOver(const char *initial_board) {
 int main(int argc, char *argv[]) {
     printf("Welcome to Bricker!\n");
 
-    char initial_board[26];
+    char initial_board[NUM_BOARD_SPACES + 1];
     memset(initial_board, 'E', 25);
     initial_board[25] = '\0';
 
@@ -108,8 +110,7 @@ int main(int argc, char *argv[]) {
             continue;
         }
     }
-
-    displayBoard(initial_board);
+    
     if (lastPlayer != 0) {
         printf("Player %d Wins!\n", lastPlayer);
     }
