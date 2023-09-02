@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
+// The size of the board
 #define NUM_BOARD_SPACES 25
 
 int main(int argc, char *argv[]) {
