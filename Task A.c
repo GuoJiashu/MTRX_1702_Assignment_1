@@ -1,13 +1,18 @@
 #include <stdio.h>
 #include <string.h>
 
+#define NUM_BOARD_SPACES 25
+
 int main(int argc, char *argv[]) {
+    // Check the number of command line arguments
     if (argc != 2) {
         printf("Incorrect number of arguments!\n");
         return 1;
     }
 
-    char initial_board[26];
+    // Store initial data of board with the string array (maximum 25 characters)
+    char initial_board[NUM_BOARD_SPACES + 1];
+    // Copy strings from command line input to initial_board
     strncpy(initial_board, argv[1], 25);
     initial_board[25] = '\0';
 
