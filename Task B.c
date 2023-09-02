@@ -2,13 +2,15 @@
 #include <string.h>
 #include <stdlib.h>
 
+#define NUM_BOARD_SPACES 25
+
 int main(int argc, char *argv[]) {
     if (argc != 5) {
         printf("Incorrect number of arguments!\n");
         return 1;
     }
 
-    char initial_board[26];
+    char initial_board[NUM_BOARD_SPACES + 1];
     strncpy(initial_board, argv[1], 25);
     initial_board[25] = '\0';
 
